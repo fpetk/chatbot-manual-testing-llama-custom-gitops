@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: chatbot-manual-testing-llama-custom
+  janus-idp.io/tekton: chatbot-manual-testing-llama-custom
+  backstage.io/kubernetes-id: chatbot-manual-testing-llama-custom
+  backstage.io/kubernetes-namespace: my-namespace-2 
+  app.kubernetes.io/part-of: chatbot-manual-testing-llama-custom
+resources: 
+- initialize-namespace.yaml
+- deployment-model-server.yaml
+- service-model-server.yaml
+- deployment.yaml
+- route.yaml
+- service.yaml
+- model-config.yaml
+- rhoai/

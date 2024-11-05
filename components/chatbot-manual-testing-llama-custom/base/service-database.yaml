@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: chatbot-manual-testing-llama-custom-database
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: chatbot-manual-testing-llama-custom-database 
+  name: chatbot-manual-testing-llama-custom-database
+spec:
+  ports:
+  - port: 
+    protocol: TCP
+    targetPort: 
+  selector:
+    app.kubernetes.io/instance: chatbot-manual-testing-llama-custom-database 

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatbot-manual-testing-llama-custom-database-config
+data:
+  VECTORDB_HOST: "chatbot-manual-testing-llama-custom-database"
+  VECTORDB_PORT: ""
